@@ -1,7 +1,16 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
 
 const Navbar = () => {
+  const [user, loading, error] = useAuthState(auth);
+
+  const logout = () => {
+    signOut(auth);
+    localStorage.removeItem('accessToken');
+  };
     return (
         <div>
             <nav class="
@@ -54,13 +63,13 @@ const Navbar = () => {
  
   <ul class="navbar-nav flex flex-col pl-0 list-style-none mr-auto">
     <li class="nav-item p-2">
-      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Home</a>
+      <Link to='/' class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Home</Link>
     </li>
     <li class="nav-item p-2">
-      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Car parts</a>
+      <Link to ='/carparts' class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Car parts</Link>
     </li>
     <li class="nav-item p-2">
-      <a class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Blogs</a>
+      <Link to='/blogs' class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Blogs</Link>
     </li>
   </ul>
  
@@ -68,23 +77,28 @@ const Navbar = () => {
   
   <div class="flex items-center relative">
  
-  <Link to='' class="text-gray-500  hover:text-gray-700 focus:text-gray-700 mr-4">
-   <p>Sign In</p>
-  </Link>
+ 
+      {user ? <button onClick={logout} className="btn btn-ghost">SignOut 
+      <img src={user.metadata.photoURL} class="rounded-full"
+      
+        style={{height: '25px', width: '25px'}} alt="" loading="lazy" />
+        {user.displayName}
+        </button> : <Link to='/signin'>SignIn</Link>}
+ 
   
 
   <div class="dropdown relative">
     
-    
+  
   </div>
-  <div class="dropdown relative">
-    <Link to='' class="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton2" role="button"
+  {/* <div class="dropdown relative">
+    <Link to='/signin' class="dropdown-toggle flex items-center hidden-arrow" href="#" id="dropdownMenuButton2" role="button"
       data-bs-toggle="dropdown" aria-expanded="false">
-      <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-full"
+      <img src='' class="rounded-full"
         style={{height: '25px', width: '25px'}} alt="" loading="lazy" />
     </Link>
    
-  </div>
+  </div> */}
   </div>
   
   </div>

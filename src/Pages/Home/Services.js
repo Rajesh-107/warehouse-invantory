@@ -27,7 +27,7 @@ const Services = () => {
                <div className="flex flex-wrap">{
                
                carParts.map(service =>
-                <SingleService key={service.id} service={service} />)}</div>
+                <SingleService key={service._id} service={service} />)}</div>
             </div>
          </section>
         
