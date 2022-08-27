@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom';
 const SingleService = ({service}) => {
     const {_id,name, img, description, price, quantity, supplier} = service;
     const navigate = useNavigate();
-    const serviceDetails = id => {
+    
+    const carpartDetails = id => {
         navigate(`inventory/${id}`)
     }
 
@@ -20,7 +21,7 @@ const SingleService = ({service}) => {
               
               <p className="leading-relaxed mb-3">Quantity: {quantity}</p>
               <div className="flex justify-between flex-wrap">
-                 <button onClick={() => serviceDetails(_id)} className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
+                 <button onClick={() => carpartDetails(_id)} className="text-indigo-500 inline-flex items-center md:mb-2 lg:mb-0">
                     Buy Now
                     <svg className="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2" fill="none" strokeLinecap="round" strokeLinejoin="round">
                        <path d="M5 12h14"></path>
