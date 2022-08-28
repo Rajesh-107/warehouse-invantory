@@ -71,6 +71,17 @@ const Navbar = () => {
     <li class="nav-item p-2">
       <Link to='/blogs' class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Blogs</Link>
     </li>
+   {
+    user && 
+    <>
+     <li class="nav-item p-2">
+      <Link to='/addparts' class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Add Item</Link>
+    </li>
+    <li class="nav-item p-2">
+      <Link to='/manageitems' class="nav-link text-gray-500 hover:text-gray-700 focus:text-gray-700 p-0" href="#">Manage Item</Link>
+    </li>
+    </>
+   }
   </ul>
  
   </div>

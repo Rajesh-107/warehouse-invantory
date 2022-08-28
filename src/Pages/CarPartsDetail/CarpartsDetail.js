@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import {  toast } from 'react-toastify';
 
 const CarpartsDetail = () => {
@@ -73,7 +73,7 @@ const CarpartsDetail = () => {
           <p className="text-lg text-red-500">Supplyer: {inventory.supplier}</p>
           <p className="text-lg">Quantity: {inventory.quantity}</p>
           <div class="card-actions justify-start">
-          <button onClick={()=> handleDeliverd()} class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Deliverd</button>
+          <button on class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"> </button>
           </div>
           <form onSubmit={handleRestock}>
               <input

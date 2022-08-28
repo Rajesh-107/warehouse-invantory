@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
-const AddCarParts = () => {
+const AddCarParts = (e) => {
   const { register, handleSubmit } = useForm();
   const onSubmit = (data) => {
     const url = `http://localhost:5000/inventory`;
@@ -15,6 +15,7 @@ const AddCarParts = () => {
       .then((res) => res.json())
       .then((result) => {
         console.log(result);
+        e.target.reset()
       });
   };
 
@@ -27,7 +28,7 @@ const AddCarParts = () => {
             <input
               class="input input-bordered input-primary w-full max-w-xs"
               placeholder="Item Name"
-              {...register("name", { required: true, maxLength: 20 })}
+              {...register("name", )}
             />
             <input
               class="input input-bordered input-primary w-full max-w-xs"
@@ -37,25 +38,25 @@ const AddCarParts = () => {
               class="input input-bordered input-primary w-full max-w-xs"
               placeholder="Price"
               type="number"
-              {...register("price", { min: 18, max: 99 })}
+              {...register("price", )}
             />
             <input
               class="input input-bordered input-primary w-full max-w-xs"
               placeholder="Quantity"
               type="quantity"
-              {...register("quantity", { min: 18, max: 99 })}
+              {...register("quantity", )}
             />
             <input
               class="input input-bordered input-primary w-full max-w-xs"
               placeholder="Photo URL"
               type="text"
-              {...register("img", { min: 18, max: 99 })}
+              {...register("img", )}
             />
             <input
               class="input input-bordered input-primary w-full max-w-xs"
               placeholder="Supplier"
               type="text"
-              {...register("supplier", { min: 18, max: 99 })}
+              {...register("supplier", )}
             />
             <input
               className="mb-3 btn btn-secondary"

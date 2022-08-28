@@ -10,6 +10,9 @@ import Navbar from './Pages/Shered/Navbar';
 import Register from './Pages/Login/Register';
 import CarpartsDetail from './Pages/CarPartsDetail/CarpartsDetail';
 import AddCarParts from './Pages/AddParts/AddCarParts';
+import ManageInventory from './Pages/ManageInventory/ManageInventory';
+import Deliverd from './Pages/Deliverd/Deliverd';
+import RequireAuth from './Pages/Login/RequireAuth';
 
 function App() {
   return (
@@ -17,10 +20,20 @@ function App() {
       <Navbar></Navbar>
      <Routes>
       <Route path='/' element={<Home></Home>}></Route>
-      <Route path='/inventory/:id' element={<CarpartsDetail></CarpartsDetail>}></Route>
+      <Route path='/inventory/:id' element={<RequireAuth>
+        <CarpartsDetail></CarpartsDetail>
+      </RequireAuth>}></Route>
         <Route path='/signin' element={<Signin></Signin>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
-        <Route path='/addparts' element={<AddCarParts></AddCarParts>}></Route>
+        <Route path='/addparts' element={<RequireAuth>
+          <AddCarParts></AddCarParts>
+        </RequireAuth>}></Route>
+        <Route path='/manageitems' element={<RequireAuth>
+          <ManageInventory></ManageInventory>
+        </RequireAuth>}></Route>
+        <Route path='/deliverd' element={<RequireAuth>
+          <Deliverd></Deliverd>
+        </RequireAuth>}></Route>
      </Routes>
      <Footer></Footer>
      <ToastContainer/>

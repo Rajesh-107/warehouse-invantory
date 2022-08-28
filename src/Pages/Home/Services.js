@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
+import useServices from "../hooks/useServices";
 import SingleService from "./SingleService";
 
 const Services = () => {
-  const [carParts, setCarParts] = useState([]);
+  const [carParts, setCarParts] = useServices([])
 
-  useEffect(() => {
-    fetch("http://localhost:5000/inventory")
-      .then((res) => res.json())
-      .then((data) => setCarParts(data.slice(0, 6)));
-  }, []);
   return (
     <section id="carpart" className="text-gray-600 body-font">
       <div className="py-24 container m-auto lg:w-10/12 w-full">
