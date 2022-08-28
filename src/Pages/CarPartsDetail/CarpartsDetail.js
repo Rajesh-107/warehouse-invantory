@@ -15,27 +15,27 @@ const CarpartsDetail = () => {
       .then((data) => setInventory(data));
   }, [update]);
 
-  const handleDeliverd=()=>{
-    if(inventory.quantity > 0){
-        const newQuantity=parseInt(inventory.quantity)-1
-        const updatedQuantity={quantity:newQuantity}
-        fetch(`http://localhost:5000/inventory/${id}`,{
-            method:'PUT',
-            headers:{
-                'content-type':'application/json'
-            },
-            body:JSON.stringify(updatedQuantity)
-        })
-        .then(res=>res.json())
-        .then(data=>{
-            setUpdate(data)
-            toast.success('Delivery Successfull')
-        })
-    }
-    else{
-        toast.error('Sold Out')
-    }
-}
+//   const handleDeliverd=()=>{
+//     if(inventory.quantity > 0){
+//         const newQuantity=parseInt(inventory.quantity)-1
+//         const updatedQuantity={quantity:newQuantity}
+//         fetch(`http://localhost:5000/inventory/${id}`,{
+//             method:'PUT',
+//             headers:{
+//                 'content-type':'application/json'
+//             },
+//             body:JSON.stringify(updatedQuantity)
+//         })
+//         .then(res=>res.json())
+//         .then(data=>{
+//             setUpdate(data)
+//             toast.success('Delivery Successfull')
+//         })
+//     }
+//     else{
+//         toast.error('Sold Out')
+//     }
+// }
 
 
 
@@ -73,7 +73,7 @@ const CarpartsDetail = () => {
           <p className="text-lg text-red-500">Supplyer: {inventory.supplier}</p>
           <p className="text-lg">Quantity: {inventory.quantity}</p>
           <div class="card-actions justify-start">
-          <button on class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"> </button>
+          <button  class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"> <Link to={`/deliverd/${id}`}>Delivery</Link> </button>
           </div>
           <form onSubmit={handleRestock}>
               <input
