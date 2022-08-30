@@ -26,7 +26,7 @@ const Deliverd = () => {
       const newQuantity = parseInt(stockItem.quantity) - 1;
       const updatedQuantity = { quantity: newQuantity };
       axios
-        .post("http://localhost:5000/order", order)
+        .post("https://rocky-gorge-40562.herokuapp.com/order", order)
 
         .then((response) => {
           console.log(response);

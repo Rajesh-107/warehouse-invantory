@@ -35,7 +35,7 @@ const Login = () => {
         const password = passwordRef.current.value;
 
         await signInWithEmailAndPassword(email, password);
-        const {data} = await axios.post('http://localhost:5000/login',{email})
+        const {data} = await axios.post('https://rocky-gorge-40562.herokuapp.com/login',{email})
         console.log(data);
     }
 	

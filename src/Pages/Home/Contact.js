@@ -3,7 +3,7 @@ import { toast } from 'react-toastify';
 
 const Contact = () => {
     const sendAlert = ()=>{
-        toast('Our team will !')
+        toast('Our team will catch up you!')
     }
 
     return (

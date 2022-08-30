@@ -8,7 +8,7 @@ const CarpartsDetail = () => {
   const [update,setUpdate] = useState({})
 
   useEffect(() => {
-    const url = `http://localhost:5000/inventory/${id}`;
+    const url = `https://rocky-gorge-40562.herokuapp.com/inventory/${id}`;
 
     fetch(url)
       .then((res) => res.json())
@@ -19,7 +19,7 @@ const CarpartsDetail = () => {
 //     if(inventory.quantity > 0){
 //         const newQuantity=parseInt(inventory.quantity)-1
 //         const updatedQuantity={quantity:newQuantity}
-//         fetch(`http://localhost:5000/inventory/${id}`,{
+//         fetch(`https://rocky-gorge-40562.herokuapp.com/inventory/${id}`,{
 //             method:'PUT',
 //             headers:{
 //                 'content-type':'application/json'
@@ -43,7 +43,7 @@ const CarpartsDetail = () => {
     e.preventDefault()
     const newQuantity=parseInt(e.target.quantity.value )+parseInt(inventory.quantity)
     const updatedQuantity={quantity : newQuantity}
-    fetch(`http://localhost:5000/inventory/${id}`,{
+    fetch(`https://rocky-gorge-40562.herokuapp.com/inventory/${id}`,{
         method:'PUT',
         headers:{
             'content-type':'application/json'
