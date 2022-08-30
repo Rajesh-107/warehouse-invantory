@@ -13,6 +13,10 @@ import AddCarParts from './Pages/AddParts/AddCarParts';
 import ManageInventory from './Pages/ManageInventory/ManageInventory';
 import Deliverd from './Pages/Deliverd/Deliverd';
 import RequireAuth from './Pages/Login/RequireAuth';
+import NotFound from './Pages/Shered/NotFound';
+import Contact from './Pages/Home/Contact';
+import MyOrders from './Pages/MyOrders/MyOrders';
+import Blogs from './Pages/Home/Blogs';
 
 function App() {
   return (
@@ -24,6 +28,8 @@ function App() {
         <CarpartsDetail></CarpartsDetail>
       </RequireAuth>}></Route>
         <Route path='/signin' element={<Signin></Signin>}></Route>
+        <Route path='/contact' element={<Contact></Contact>}></Route>
+        <Route path='/blogs' element={<Blogs></Blogs>}></Route>
         <Route path='/register' element={<Register></Register>}></Route>
         <Route path='/addparts' element={<RequireAuth>
           <AddCarParts></AddCarParts>
@@ -34,6 +40,10 @@ function App() {
         <Route path='/deliverd/:id' element={<RequireAuth>
           <Deliverd></Deliverd>
         </RequireAuth>}></Route>
+        <Route path='/myorder' element={<RequireAuth>
+          <MyOrders></MyOrders>
+        </RequireAuth>}></Route>
+        <Route path='*' element={<NotFound></NotFound>}></Route>
      </Routes>
      <Footer></Footer>
      <ToastContainer/>

@@ -12,7 +12,7 @@ const SecondBanner = () => {
                   <br className="hidden lg:inline-block" />
                   management software
                </h1>
-               <p className="mb-8 leading-relaxed">This might seem the most obvious point of all, but there’s far more to having an organised warehouse than simply ensuring your stock is where it should be though of course, that is pretty important!.</p>
+               <p className="mb-8 leading-relaxed lg:text-xl">This might seem the most obvious point of all, but there’s far more to having an organised warehouse than simply ensuring your stock is where it should be though of course, that is pretty important!.</p>
                <div className="flex justify-center">
                   <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" >Contact</button>
                  

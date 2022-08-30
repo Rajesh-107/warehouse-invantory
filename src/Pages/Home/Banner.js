@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -11,10 +12,10 @@ const Banner = () => {
                   <br className="hidden lg:inline-block" />
                   Already Stock Our Product
                </h1>
-               <p className="mb-8 leading-relaxed">A warehouse is a building for storing goods. Warehouses are used by manufacturers, importers, exporters, wholesalers,
+               <p className="mb-8 leading-relaxed lg:text-xl">A warehouse is a building for storing goods. Warehouses are used by manufacturers, importers, exporters, wholesalers,
                 transport businesses, customs, etc.</p>
                <div className="flex justify-center">
-                  <button className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" >Contact</button>
+                  <Link to='/contact' className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" >Contact</Link>
                  
                </div>
             </div>

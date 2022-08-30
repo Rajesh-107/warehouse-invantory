@@ -11,8 +11,8 @@ const Services = () => {
         <h1 className="sm:text-3xl text-2xl text-center font-medium title-font mb-2 text-gray-900">
           CarParts Item availabe
         </h1>
-        <div className="flex flex-wrap w-full mb-20 px-4">
-          <div className="lg:w-1/2 w-full mb-6 lg:mb-0">
+        <div className="flex flex-wrap w-full py-14 mb-20 px-4">
+          <div className="lg:w-1/2 w-full mb-6 lg:mb-0 ">
             <h1 className="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">
               Our Service
             </h1>
