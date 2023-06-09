@@ -15,7 +15,7 @@ const Banner = () => {
                <p className="mb-8 leading-relaxed lg:text-xl">A warehouse is a building for storing goods. Warehouses are used by manufacturers, importers, exporters, wholesalers,
                 transport businesses, customs, etc.</p>
                <div className="flex justify-center">
-                  <Link to='/contact' className="inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" >Contact</Link>
+                  <Link to='/contact' className="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg" >Contact</Link>
                  
                </div>
             </div>

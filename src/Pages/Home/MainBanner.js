@@ -9,7 +9,7 @@ const MainBanner = () => {
     <div class="max-w-md">
       <h1 class="mb-5 lg:text-5xl font-bold">Hello there</h1>
       <p class="lg:mb-5 lg:text-xl">A warehouse is a building for storing goods. Warehouses are used by manufacturers, importers, exporters, wholesalers, transport businesses, customs, etc. They are usually large plain buildings in industrial parks on the outskirts of cities, towns.</p>
-      <button class=" bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Get Started</button>
+      <button class=" bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg">Get Started</button>
     </div>
   </div>
 </div>
